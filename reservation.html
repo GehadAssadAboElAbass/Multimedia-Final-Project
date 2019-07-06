@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Music | Reservation</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="icon" href="img/fivcon1.png">
+    <script src="js/respond.js"></script>
+	<script src="js/wow.js"></script>
+  <style>
+    fieldset {
+      border: 0;
+    }
+    label {
+      display: block;
+      margin: 30px 0 0 0;
+    }
+    .overflow {
+      height: 200px;
+    }
+	#top{
+background:     #111111    ;
+}
+	article{
+background:  #DADADA  ;
+}
+	footer{
+background:    #111111    ;
+}
+	aside{
+background:  #DBDBDB     ;
+}
+ body{
+ background: #000000   ;
+ }
+ label{
+ color : #FFFFFF;
+ }
+ body{
+padding:70px;
+}
+#cairokee, #sharmofers, #massar{
+width:100%;
+height:100%;
+}
+li.dropdown-menu
+{
+ background: #000000   ;
+ color : #FFFFFF;
+}
+a.button{
+background:#e74c3c;
+color:white;
+padding:10px;
+text-decoration:none;
+width:100px;
+height:50px;
+display:inline-block;
+font-size:25px;
+border-radius: 10px;
+animation-duration: 0.3s;
+animation-delay: 2s;
+animation-iteration-count: 5;
+}
+
+#f1_container {
+  position: relative;
+  margin: 10px auto;
+  width: 450px;
+  height: 281px;
+  z-index: 1;
+}
+#f1_container {
+  perspective: 1000;
+}
+#f1_card {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 1.0s linear;
+}
+#f1_container:hover #f1_card {
+  transform: rotateY(180deg);
+  box-shadow: -5px 5px 5px #aaa;
+}
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.face.back {
+  display: block;
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  background-color: #000000;
+}
+
+/* General/reset styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+  color: #333;
+}
+
+.new-section {
+  padding-top: 50px;
+  text-align: center;
+  font-size: 4em;
+  font-weight: 100;
+}
+
+/* Header styles */
+
+header {
+  position: relative;
+  text-align: center;
+  height: 100vh;
+  background: linear-gradient(to right, #69bcf4, #30cc8b);
+  color: #000000;
+}
+
+header h1 {
+  padding-top: 100px;
+  padding-top: -webkit-calc(50vh - 113px);
+  padding-top: expression(50vh - 113px);
+  padding-top: -moz-calc(50vh - 113px);
+  padding-top: -o-calc(50vh - 113px);
+  padding-top: calc(50vh - 113px);
+  font-size: 7em;
+  font-weight: 100;
+}
+
+header h2 {
+  font-size: 2em;
+}
+
+header span.animated {
+  position: absolute;
+  margin: auto;
+  right: 0;
+  left: 0;
+  bottom: 50px;
+  height: 4px;
+  width: 4px;
+  border-radius: 2px;
+  background: #000000;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+}
+
+header span::before,
+header span::after {
+  position: absolute;
+  top: -23px;
+  content: "";
+  height: 30px;
+  width: 4px;
+  border-radius: 2px;
+  background: #fff;
+}
+
+header span::before {
+  left: -10px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform:    rotate(-45deg);
+  -ms-transform:     rotate(-45deg);
+  -o-transform:      rotate(-45deg);
+  transform:         rotate(-45deg);
+}
+
+header span::after {
+  right: -10px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform:    rotate(45deg);
+  -ms-transform:     rotate(45deg);
+  -o-transform:      rotate(45deg);
+  transform:         rotate(45deg);
+}
+
+/* Scroll animations styles */
+
+.scroll-animations {
+  display: flex;
+}
+
+.scroll-animations div {
+  flex-grow: 1;
+  padding: 30px;
+  text-align: center;
+  opacity: 0;
+  color: #333;
+}
+
+.scroll-animations div span {
+  font-size: 4em;
+  color: #5AA9E0;
+}
+
+.scroll-animations div h3 {
+  font-size: 1.9em;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+/* Click animations styles */
+
+.click-animations {
+  margin-top: 35px;
+  padding-bottom: 20px;
+  background: #f6f8fa;
+}
+
+.click-animations input {
+  display: block;
+  margin: 20px auto;
+  padding: 10px;
+  height: 50px;
+  width: 50%;
+  font-size: 30px;
+  outline: none;
+  border: 2px solid transparent;
+  transition: 0.3s;
+}
+
+.click-animations textarea {
+  display: block;
+  margin: 20px auto;
+  padding: 10px;
+  width: 50%;
+  font-size: 30px;
+  outline: none;
+  border: 2px solid transparent;
+  resize: none;
+  transition: 0.3s;
+}
+
+.click-animations input:focus,
+.click-animations textarea:focus {
+  border-color: #30cc8b;
+}
+
+.click-animations button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px;
+  width: 50%;
+  font-size: 30px;
+  border: none;
+  outline: none;
+  background: #30cc8b;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.click-animations button:active {
+  transform: scale(0.95);
+}
+
+.form-error {
+  border-color: #F46036 !important;
+}
+
+/* Media queries */
+
+@media (max-width: 759px) {
+  header h1 {
+    font-size: 5em;
+  }
+  
+  .new-section {
+    font-size: 3em;
+  }
+  
+  .scroll-animations {
+    display: block;
+  }
+  
+  .scroll-animations div {
+    padding: 20px 80px;
+  }
+  
+  .click-animations input,
+  .click-animations textarea,
+  .click-animations button {
+    width: 80%;
+  }
+}
+
+@media (max-width: 475px) {
+  .new-section {
+    font-size: 2.5em;
+  } 
+  
+  header h1 {
+    font-size: 3.2em;
+  }
+  
+  header h2,
+  .funky-animations h3 {
+    font-size: 1.5em;
+  }
+  
+}
+
+
+
+  </style>
+
+</head>
+<body>
+<div class="container">
+<div class="row" id="top">
+<div class="col-lg-8 col-sm-7">
+<img src="img/Logo1.png" width="500px" height="250px" class="img-respnsive">
+</div>
+<div class="col-md-4 col-sm-5">
+<img src="img/Artboard 1.png" width="250px"  class="img=responsive  hidden-xs">
+</div>
+</div>
+
+</br></br>
+
+
+<nav class="navbar navbar-inverse ">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle " data-toggle="collapse" data-target="#collapse"><span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button>
+</div>
+<div class="collapse navbar-collapse" id="collapse">
+<ul class="nav navbar-nav">
+<li><a href="home.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li class="dropdown"><a href="#" data-toggle="dropdown">Genre<span class="caret"></span></a>
+
+<ul class="dropdown-menu">
+<li><a href="about.html#Rock">Rock</a></li>
+<li><a href="about.html#Jazz">Jazz</a></li>
+<li><a href="about.html#Folk">Folk</a></li>
+<li><a href="about.html#House">House</a></li>
+<li><a href="about.html#Hip">Hip Hop</a></li>
+</ul>
+
+</li>
+<li><a href="events.html">Events</a></li>
+<li><a href="contact.html">Contact US</a></li>
+</ul>
+</div>
+</nav>
+<!-- Click animations section -->
+<div class="click-animations">
+  <h2 class="new-section"><b> Reservation</b></h2>
+  </br></br>
+  <form>
+    <input type="text" placeholder="Name" id="name" required />
+    <input type="text" placeholder="Email" id="email" required />
+    <textarea rows="7" placeholder="Address" id="message"></textarea>
+  </form>
+  <button id="myButton">Send</button>
+</div>
+
+</br></br>
+
+<footer>
+<div class="footer-copyright text-center py-3">All Copy Rights &copy; Reserved. </div>
+
+</footer>
+</div>
+
+
+<!--Javascript-->
+<script src="js/jquery-latest.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>
+  $( function() {
+    $( "#speed" ).selectmenu();
+ 
+    
+  } );
+  </script>
+  <script>
+  
+  $( function() {
+    $( "#accordion" ).accordion();
+  } );
+  </script>
+<script>
+function openCity(evt, cityName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " w3-red";
+}
+</script>
+<script>
+// Scroll function courtesy of Scott Dowding; http://stackoverflow.com/questions/487073/check-if-element-is-visible-after-scrolling
+
+$(document).ready(function() {
+  // Check if element is scrolled into view
+  function isScrolledIntoView(elem) {
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return elemBottom <= docViewBottom && elemTop >= docViewTop;
+  }
+  // If element is scrolled into view, fade it in
+  $(window).scroll(function() {
+    $(".scroll-animations .animated").each(function() {
+      if (isScrolledIntoView(this) === true) {
+        $(this).addClass("fadeInLeft");
+      }
+    });
+  });
+
+  // Click Animations
+  $("button").on("click", function() {
+    /*
+    If any input is empty make it's border red and shake it. After the animation is complete, remove the shake and animated classes so that the animation can repeat.
+    */
+
+    // Check name input
+    if ($("#name").val() === "") {
+      $("#name")
+        .addClass("form-error animated shake")
+        .one(
+          "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",
+          function() {
+            $(this).removeClass("animated shake");
+          }
+        );
+    } else {
+      $("#name").removeClass("form-error");
+    }
+
+    // Check email input
+    if ($("#email").val() === "") {
+      $("#email")
+        .addClass("form-error animated shake")
+        .one(
+          "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",
+          function() {
+            $(this).removeClass("animated shake");
+          }
+        );
+    } else {
+      $("#email").removeClass("form-error");
+    }
+
+    // Check message textarea
+    if ($("#message").val() === "") {
+      $("#message")
+        .addClass("form-error animated shake")
+        .one(
+          "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",
+          function() {
+            $(this).removeClass("animated shake");
+          }
+        );
+    } else {
+      $("#message").removeClass("form-error");
+    }
+  });
+});
+
+</script>
+
+<script type="text/javascript">
+    document.getElementById("myButton").onclick = function () {
+        location.href = "task32.html";
+    };
+</script>
+</body>
+</html>

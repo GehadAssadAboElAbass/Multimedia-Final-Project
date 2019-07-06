@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Music | Ticket</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="icon" href="img/fivcon1.png">
+    <script src="js/respond.js"></script>
+	<script src="js/wow.js"></script>
+  <style>
+    fieldset {
+      border: 0;
+    }
+    label {
+      display: block;
+      margin: 30px 0 0 0;
+    }
+    .overflow {
+      height: 200px;
+    }
+	header{
+background:     #111111    ;
+}
+	article{
+background:  #DADADA  ;
+}
+	footer{
+background:    #111111    ;
+}
+	aside{
+background:  #DBDBDB     ;
+}
+ body{
+ background: #000000   ;
+ }
+ label{
+ color : #FFFFFF;
+ }
+ body{
+padding:70px;
+}
+#cairokee, #sharmofers, #massar{
+width:100%;
+height:100%;
+}
+li.dropdown-menu
+{
+ background: #000000   ;
+ color : #FFFFFF;
+}
+a.button{
+background:#e74c3c;
+color:white;
+padding:10px;
+text-decoration:none;
+width:100px;
+height:50px;
+display:inline-block;
+font-size:25px;
+border-radius: 10px;
+animation-duration: 0.3s;
+animation-delay: 2s;
+animation-iteration-count: 5;
+}
+
+#f1_container {
+  position: relative;
+  margin: 10px auto;
+  width: 450px;
+  height: 281px;
+  z-index: 1;
+}
+#f1_container {
+  perspective: 1000;
+}
+#f1_card {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 1.0s linear;
+}
+#f1_container:hover #f1_card {
+  transform: rotateY(180deg);
+  box-shadow: -5px 5px 5px #aaa;
+}
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.face.back {
+  display: block;
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  background-color: #000000;
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Arvo);
+  body{
+        background:url(https://subtlepatterns.com/patterns/broken_noise.png);
+        font-family:Arvo;
+    }
+    .box{
+        margin:0px auto;
+        margin-top:80px;
+        background:#FFF9EE url(https://subtlepatterns.com/patterns/lightpaperfibers.png);
+        color:#333;
+        text-transform:uppercase;
+        padding:8px;
+        width:300px;
+        font-weight:bold;
+        text-shadow:0px 1px 0px #fff;
+        font-family:"arvo";
+        font-size: 11px;
+        border-left: 1px dashed rgba(51, 51, 51, 0.5);
+        -webkit-filter: drop-shadow(0 5px 18px #000);
+    }
+
+  .inner{
+        border: 2px dashed rgba(51, 51, 51, 0.5);
+        min-height:100px;
+        padding:8px;
+        
+    }
+    .inner h1{
+        padding:5px 0px;
+        margin:0px;
+        font-size:18px;
+        border-bottom: 1px solid rgba(51, 51, 51, 0.3);
+        text-align:center;
+    }
+    .info{
+        width:100%;
+        margin-top:5px;
+    }
+    .info .wp{
+        float: left;
+        padding: 5px;
+        width: 83px;
+        text-align: center;
+    }
+    .info .wp h2{
+        margin: 8px;
+    }
+    .total{
+        border-top: 1px solid rgba(51, 51, 51, 0.3);
+    }
+    
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+    .total h2{
+        padding-left:115px;
+        margin:10px 0px; 
+        font-size: 15px;
+    }
+    .total p{float:right;margin:0px;margin-right: 15px;}
+    
+    a.buy{
+        color:#fff;
+        text-align:center;
+        font-size:25px;
+        text-decoration:none;
+        display:block;
+        width:200px;
+        margin:0px auto;
+        margin-top:50px;
+        padding:5px;
+        background:rgba(0,0,0,0.5);
+    }
+  </style>
+
+</head>
+<body onload="myFunction()">
+<div class="container">
+<header class="row">
+<div class="col-lg-8 col-sm-7">
+<img src="img/Logo1.png" width="500px" height="250px" class="img-respnsive">
+</div>
+<div class="col-md-4 col-sm-5">
+<img src="img/Artboard 1.png" width="250px"  class="img=responsive  hidden-xs">
+</div>
+</header>
+
+</br></br>
+
+
+<nav class="navbar navbar-inverse ">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle " data-toggle="collapse" data-target="#collapse"><span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button>
+</div>
+<div class="collapse navbar-collapse" id="collapse">
+<ul class="nav navbar-nav">
+<li><a href="thome.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li class="dropdown"><a href="#" data-toggle="dropdown">Genre<span class="caret"></span></a>
+
+<ul class="dropdown-menu">
+<li><a href="about.html#Rock">Rock</a></li>
+<li><a href="about.html#Jazz">Jazz</a></li>
+<li><a href="about.html#Folk">Folk</a></li>
+<li><a href="about.html#House">House</a></li>
+<li><a href="about.html#Hip">Hip Hop</a></li>
+</ul>
+
+</li>
+<li><a href="events.html">Events</a></li>
+<li><a href="contact.html">Contact US</a></li>
+</ul>
+</div>
+</nav>
+
+<div class="box " >
+        <div class='inner'>
+        <h1>We are Waiting for you</h1>
+        <div class='info clearfix'>
+            <div class='wp'>Tickets<h2 >1</h2></div>
+            <div class='wp'>Type<h2>VIP</h2></div>
+            <div class='wp'>Disc<h2>100%</h2></div>
+        </div>
+        <div class='total clearfix'>
+            <h2>Don't Forget to take a <p>Screenshot</p></h2>
+        </div>
+        </div>
+    </div>
+
+</br></br>
+
+<footer>
+<div class="footer-copyright text-center py-3">All Copy Rights &copy; Reserved. </div>
+
+</footer>
+</div>
+
+
+<!--Javascript-->
+<script src="js/jquery-latest.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>
+  $( function() {
+    $( "#speed" ).selectmenu();
+ 
+    
+  } );
+  </script>
+  <script>
+  
+  $( function() {
+    $( "#accordion" ).accordion();
+  } );
+  </script>
+<script>
+function openCity(evt, cityName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " w3-red";
+}
+</script>
+</body>
+</html>
